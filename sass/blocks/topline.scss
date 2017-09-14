@@ -1,0 +1,22 @@
+.topline {
+  background-color: $light-grey;
+  color: #ffffff;
+}
+
+.topline__inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+@media screen and #{$mobile-width}  {
+
+  .topline__inner-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}
