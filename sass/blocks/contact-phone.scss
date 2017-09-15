@@ -1,0 +1,13 @@
+.contact-phone {
+  & svg {
+    fill: $orange;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  & span {
+    font-size: 17px;
+    line-height: 42px;
+    font-weight: 600;
+  }
+}

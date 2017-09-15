@@ -1,0 +1,18 @@
+.main-logo__image {
+  display: block;
+}
+
+@media #{$mobile-width} {
+
+  .main-logo {
+    width: 100%;
+    margin-bottom: 25px;
+
+    order: -3;
+  }
+
+  .main-logo__image {
+    margin: 0 auto;
+  }
+
+}

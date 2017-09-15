@@ -252,7 +252,7 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
   </symbol>
   <symbol id="shopping-cart" viewBox="0 0 19.25 19.25">
-		<path style="fill:#030104;" d="M19.006,2.97c-0.191-0.219-0.466-0.345-0.756-0.345H4.431L4.236,1.461
+		<path  d="M19.006,2.97c-0.191-0.219-0.466-0.345-0.756-0.345H4.431L4.236,1.461
 		C4.156,0.979,3.739,0.625,3.25,0.625H1c-0.553,0-1,0.447-1,1s0.447,1,1,1h1.403l1.86,11.164c0.008,0.045,0.031,0.082,0.045,0.124
 		c0.016,0.053,0.029,0.103,0.054,0.151c0.032,0.066,0.075,0.122,0.12,0.179c0.031,0.039,0.059,0.078,0.095,0.112
 		c0.058,0.054,0.125,0.092,0.193,0.13c0.038,0.021,0.071,0.049,0.112,0.065c0.116,0.047,0.238,0.075,0.367,0.075
@@ -260,8 +260,8 @@
 		C19.281,3.479,19.195,3.188,19.006,2.97z M17.097,4.625l-0.285,2H13.25v-2H17.097z M12.25,4.625v2h-3v-2H12.25z M12.25,7.625v2
 		h-3v-2H12.25z M8.25,4.625v2h-3c-0.053,0-0.101,0.015-0.148,0.03l-0.338-2.03H8.25z M5.264,7.625H8.25v2H5.597L5.264,7.625z
 		 M13.25,9.625v-2h3.418l-0.285,2H13.25z"/>
-  	<circle style="fill:#030104;" cx="6.75" cy="17.125" r="1.5"/>
-  	<circle style="fill:#030104;" cx="15.75" cy="17.125" r="1.5"/>
+  	<circle cx="6.75" cy="17.125" r="1.5"/>
+  	<circle cx="15.75" cy="17.125" r="1.5"/>
   </symbol>
   <symbol id="star" viewBox="0 0 475.075 475.075">
   	<path d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704
@@ -327,13 +327,54 @@
             <use xlink:href="#reorder-option"></use>
           </svg>
         </a>
-        <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="#">Lorem ipsum</a></li>
-          <li class="main-menu__item"><a href="#">dolor sit</a></li>
-          <li class="main-menu__item"><a href="#">consectetur adipisicing</a></li>
-          <li class="main-menu__item"><a href="#">elit</a></li>
-          <li class="main-menu__item"><a href="#">Minus possimus</a></li>
-        </ul>
+        <div class="main-menu__list-wrapper">
+          <ul class="main-menu__list">
+            <li class="main-menu__item"><a href="#">Lorem ipsum</a></li>
+            <li class="main-menu__item"><a href="#">dolor sit</a></li>
+            <li class="main-menu__item"><a href="#">consectetur adipisicing</a></li>
+            <li class="main-menu__item"><a href="#">elit</a></li>
+            <li class="main-menu__item"><a href="#">Minus possimus</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <section class="topline2">
+    <div class="container topline2__inner-container">
+
+      <div class="contact-phone">
+        <svg viewbox="0 0 90 90" width="23" height="32" preserveAspectRatio="none">
+          <use xlink:href="#computer-tablet"></use>
+        </svg>
+        <span>2300 - 3560 - 222</span>
+      </div>
+
+      <div class="main-logo">
+        <img class="main-logo__image" src="img/main-logo.png" alt="Bazar">
+      </div>
+
+      <section class="main-cart">
+        <a href="/cart.html" class="main-cart__toggle">
+          <svg width="25" height="25" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="#shopping-cart"></use>
+          </svg>
+          <span class="main-cart__count">0</span>
+        </a>
+        <div class="main-cart__list-wrapper">
+          <ul class="main-cart__list">
+            <li class="main-cart__item">
+              <a href="#">purchase-1</a>
+            </li>
+            <li class="main-cart__item">
+              <a href="#">purchase-2</a>
+            </li>
+            <li class="main-cart__item">
+              <a href="#">purchase-3</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
     </div>
