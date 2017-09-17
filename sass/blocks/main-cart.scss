@@ -34,6 +34,15 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
+
+    transform: translateX(0px);
+    transition: transform 0.5s;
+  }
+
+  &--opened {
+    & span {
+      transform: translateX(-56px);
+    }
   }
 
 }

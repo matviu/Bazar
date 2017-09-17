@@ -13,7 +13,6 @@ window.onload = function() {
     btnLoginClose.onclick = closePopup;
 
     window.addEventListener("keydown", function() {
-      console.log(event)
       if(event.keyCode == 27 && popupLogin.classList.contains("login-wrapper--show")) {
          closePopup();
       }
@@ -40,14 +39,31 @@ window.onload = function() {
     var btnToggle = document.querySelector('.main-menu__toggle');
     var menu = document.querySelector('.main-menu__list');
     var menuWrapper = document.querySelector('.main-menu__list-wrapper');
+    var menuItem = document.querySelectorAll('.main-menu__item a');
 
     btnToggle.onclick = toggleMenu;
+
+    menu.onclick = function() {
+      var target = event.target;
+      if (target.tagName !== "A") return;
+      closeMenu();
+    };
+
 
     function toggleMenu() {
       event.preventDefault();
       menu.classList.toggle('main-menu__list--show');
       btnToggle.classList.toggle('main-menu__toggle--opened');
       menuWrapper.classList.toggle('main-menu__list-wrapper--show');
+    }
+
+    function closeMenu() {
+      event.preventDefault();
+      if (menu.classList.contains('main-menu__list--show')) {
+        menu.classList.remove('main-menu__list--show');
+        btnToggle.classList.remove('main-menu__toggle--opened');
+        menuWrapper.classList.remove('main-menu__list-wrapper--show');
+      }
     }
 
   })();
@@ -60,11 +76,42 @@ window.onload = function() {
 
     btnToggle.onclick = toggleCartList;
 
+    cartList.onclick = function() {
+      var target = event.target;
+      if (target.tagName !== "A") return;
+      closeCartList();
+    };
+
     function toggleCartList() {
       event.preventDefault();
       cartList.classList.toggle('main-cart__list--show');
       btnToggle.classList.toggle('main-cart__toggle--opened');
       cartListWrapper.classList.toggle('main-cart__list-wrapper--show');
+    }
+
+    function closeCartList() {
+      event.preventDefault();
+      if (cartList.classList.contains('main-cart__list--show')) {
+        cartList.classList.remove('main-cart__list--show');
+        btnToggle.classList.remove('main-cart__toggle--opened');
+        cartListWrapper.classList.remove('main-cart__list-wrapper--show');
+      }
+    }
+
+  })();
+
+  (function searchBlock() {
+
+    var btnToggle = document.querySelector('.search-block__toggle');
+    var search1 = document.querySelector('.search-block__select');
+    var search2 = document.querySelector('.search-block__searchfield');
+
+    btnToggle.onclick = toggleSearch;
+
+    function toggleSearch() {
+      search1.classList.toggle('search-block__select--show');
+      search2.classList.toggle('search-block__searchfield--show');
+      btnToggle.classList.toggle('search-block__toggle--opened');
     }
 
   })();

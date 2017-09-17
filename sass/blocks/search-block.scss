@@ -1,0 +1,139 @@
+.search-block {
+  display: flex;
+  align-items: center;
+  border: 1px solid $dark-grey;
+}
+
+.search-block__toggle {
+  display: none;
+}
+
+.search-block__icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  fill: $orange;
+}
+
+.search-block__select {
+  display: inline-block;
+  vertical-align: middle;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  height: 47px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 52px;
+  padding-right: 16px;
+
+  border: none;
+  border-right: 1px solid $dark-grey;
+  background-image: url("../img/list.png");
+  background-repeat: no-repeat;
+  background-position: left 14px top 50%;
+
+  cursor: pointer;
+
+  & option {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &:focus {
+    outline:none;
+    box-shadow: 0 0 5px 2px $orange inset;
+  }
+
+}
+
+.search-block__searchfield {
+  width: 277px;
+  height: 47px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+  padding-right: 46px;
+
+  border: none;
+
+  background-image: url("../img/svg-icons/musica-searcher.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right 16px top 12px;
+
+  &:focus {
+    outline:none;
+    box-shadow: 0 0 5px 2px $orange inset;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+
+  .search-block {
+    position: relative;
+    margin-right: 15px;
+    border: none;
+
+  }
+  .search-block__select,
+  .search-block__searchfield {
+    display: none;
+
+    &--show {
+      display: block;
+      position: absolute;
+      z-index: 8;
+    }
+  }
+
+  .search-block__select--show {
+    left: 0;
+    bottom: -70px;
+    width: 277px;
+
+    border-right: none;
+    border: 1px solid $dark-grey;
+  }
+
+  .search-block__searchfield--show {
+    left: 0;
+    bottom: -117px;
+
+    border: 1px solid $dark-grey;
+    border-top: none;
+  }
+
+  .search-block__toggle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: $orange;
+
+    cursor: pointer;
+    transition: border-radius 0.5s;
+
+    &--opened {
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: $grey;
+      & svg {
+        fill: $orange;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px 2px $orange;
+    }
+  }
+
+
+}
