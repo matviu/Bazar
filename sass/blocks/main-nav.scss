@@ -1,4 +1,5 @@
 .main-nav {
+  min-height: inherit;
   margin-left: auto;
   margin-right: -15px;
 }
@@ -76,28 +77,106 @@
     height: 50px;
 
     border: none;
-    background-color: pink;
+    border-radius: 4px;
+    background-color: transparent;
 
-
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 3px
+    }
   }
 
   .main-nav__list {
     width: 100%;
+    background-color: $orange;
   }
 
   .main-nav__item {
-    display: none;
     width: 100%;
 
     &--active {
-      display: block;
+
+      & a {
+        background-color: transparent;
+        color: $dark-grey;
+
+        &::before {
+          display: none;
+        }
+      }
     }
 
     & a {
       padding-left: 50px;
       font-size: 25px;
-
     }
   }
+
+  .main-nav--closed {
+    & .main-nav__toggle {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+
+        width: 40px;
+        height: 4px;
+        background-color: #ffffff;
+
+        box-shadow: 0 -10px 0 0 #ffffff,
+                    0 10px 0 0 #ffffff;
+      }
+    }
+
+    & .main-nav__item {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  .main-nav--opened {
+    & .main-nav__list {
+      flex-direction: column;
+
+      position: absolute;
+      top: 0;
+    }
+
+    & .main-nav__toggle {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 40px;
+        height: 4px;
+        background-color: #ffffff;
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 40px;
+        height: 4px;
+        background-color: #ffffff;
+        transform: rotate(-45deg);
+      }
+    }
+
+    & .main-nav__item {
+      display: block;
+
+
+      &--active {
+        position: static;
+
+      }
+    }
+  }
+
+
 
 }

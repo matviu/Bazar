@@ -116,6 +116,25 @@ window.onload = function() {
 
   })();
 
+  (function mainNav() {
+
+    var btnToggle = document.querySelector('.main-nav__toggle');
+    var mainNav = document.querySelector('.main-nav');
+
+    btnToggle.onclick = toggleNav;
+
+    function toggleNav() {
+      if (mainNav.classList.contains('main-nav--closed')) {
+        mainNav.classList.remove('main-nav--closed');
+        mainNav.classList.add('main-nav--opened');
+      } else {
+        mainNav.classList.add('main-nav--closed');
+        mainNav.classList.remove('main-nav--opened');
+      }
+    }
+
+  })();
+
 
 
 
