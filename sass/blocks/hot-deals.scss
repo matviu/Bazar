@@ -1,0 +1,135 @@
+.hot-deals {
+  width: 31.5789%; //360/1140
+}
+
+.hot-deals__header {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: $dark-grey;
+  color: #ffffff;
+}
+
+.hot-deals__title {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hot-deals__slider-controls {
+
+}
+
+.hot-deals__slider-dot {
+  display: inline-block;
+  vertical-align: middle;
+
+  height: 15px;
+  width: 15px;
+  margin-right: 6px;
+
+  border-radius: 50%;
+  background-color: #e2e2e2;
+
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    background-color: $orange;
+  }
+}
+
+.hot-deals__slide {
+  position: relative;
+  display: none;
+
+  background-color: #f4f5f7;
+
+  overflow: hidden;
+
+  &--show {
+    display: block;
+  }
+
+}
+
+.hot-deals__img {
+  display: block;
+  width: 100%;
+}
+
+.add-to-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -66px;
+  margin-top: -17px;
+
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  text-transform: uppercase;
+  font-size: 13px;
+
+  & svg {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+    fill: #ffffff;
+  }
+
+  &:hover {
+    background-color: $orange;
+    color: $dark-grey;
+
+    & svg {
+      fill: $dark-grey;
+    }
+  }
+}
+
+.hot-deals__counter {
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  margin-left: -151px;
+}
+
+.hot-deals__tablo {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+  background-color: $grey;
+  color: #ffffff;
+}
+
+.count-number {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.hot-deals__description {
+  border: 1px solid #e2e2e2;
+}
+
+.hot-deals__deal-title {
+  display: block;
+  font-size: 16px;
+  line-height: 41px;
+  font-weight: 600;
+  text-align: center;
+}

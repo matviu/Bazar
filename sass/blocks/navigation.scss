@@ -1,9 +1,11 @@
+.navigation {
+  box-shadow: 0 5px 5px 2px rgba(0,0,0,0.5);
+}
+
 .navigation__inner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   min-height: 84px;
-
-  outline: 1px solid red;
 }

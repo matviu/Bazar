@@ -169,14 +169,14 @@
     & .main-nav__item {
       display: block;
 
-
       &--active {
         position: static;
+      }
 
+      & a {
+        border-top: 1px solid lighten($orange, 20%);
+        border-bottom: 1px solid darken($orange, 20%);
       }
     }
   }
-
-
-
 }
