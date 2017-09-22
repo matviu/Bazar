@@ -7,8 +7,6 @@
   background-color: #cccccc;
 }
 
-
-
 .big-slider__slide {
   position: absolute;
   opacity: 0;
@@ -94,8 +92,18 @@
 @media screen and (max-width: 750px) {
 
   .big-slider {
-    width: auto;
+    width: 100%;
     max-width: 750px;
+    min-width: auto;
+  }
+
+}
+
+@media screen and #{$mobile-width} {
+
+  .big-slider__description {
+    margin-top: 114px;
+    margin-bottom: 114px;
   }
 
 }

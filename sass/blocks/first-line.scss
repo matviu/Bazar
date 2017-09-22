@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
 
+  margin-bottom: 70px;
+
   outline: 1px solid red;
 }
 
@@ -10,6 +12,15 @@
   .first-line-wrapper {
     flex-direction: column;
     align-items: center;
+  }
+
+}
+
+@media screen and #{$mobile-width} {
+
+  .first-line-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 }
